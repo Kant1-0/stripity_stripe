@@ -12,6 +12,8 @@ defmodule Stripe.Converter do
 
   @supported_objects ~w(
     account
+    application_fee
+    fee_refund
     balance
     balance_transaction
     bank_account
@@ -20,6 +22,7 @@ defmodule Stripe.Converter do
     country_spec
     coupon
     customer
+    dispute
     event
     external_account
     file_upload
@@ -35,6 +38,8 @@ defmodule Stripe.Converter do
     refund
     source
     subscription
+    transfer
+    transfer_reversal
     token
   )
 
