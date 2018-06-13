@@ -50,7 +50,9 @@ defmodule Stripe.Invoice do
           tax: integer | nil,
           tax_percent: integer | nil,
           total: integer,
-          webhooks_delivered_at: Stripe.timestamp() | nil
+          webhooks_delivered_at: Stripe.timestamp() | nil,
+          hosted_invoice_url: String.t() | nil,
+          number: String.t() | nil
         }
 
   defstruct [
