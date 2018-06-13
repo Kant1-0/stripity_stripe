@@ -50,7 +50,13 @@ defmodule Stripe.Invoice do
           tax: integer | nil,
           tax_percent: integer | nil,
           total: integer,
-          webhooks_delivered_at: Stripe.timestamp() | nil
+          webhooks_delivered_at: Stripe.timestamp() | nil,
+          hosted_invoice_url: String.t() | nil,
+          number: String.t() | nil,
+          amount_paid: integer | nil,
+          amount_remaining: integer | nil,
+          billing_reason: String.t() | nil,
+          invoice_pdf: String.t() | nil
         }
 
   defstruct [
@@ -87,7 +93,13 @@ defmodule Stripe.Invoice do
     :tax,
     :tax_percent,
     :total,
-    :webhooks_delivered_at
+    :webhooks_delivered_at,
+    :hosted_invoice_url,
+    :number,
+    :amount_paid,
+    :amount_remaining,
+    :billing_reason,
+    :invoice_pdf
   ]
 
   @plural_endpoint "invoices"
